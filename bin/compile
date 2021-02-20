@@ -706,6 +706,9 @@ cd $build_dir/$composer_bindir
 ln -fs $relbins .
 cd $build_dir
 
+source $bp_dir/bin/raphf
+source $bp_dir/bin/propro
+source $bp_dir/bin/http
 if [[ ! -f "Procfile" ]]; then
 	echo "web: heroku-php-apache2" > Procfile
 	notice_inline "No Procfile, using 'web: heroku-php-apache2'."
